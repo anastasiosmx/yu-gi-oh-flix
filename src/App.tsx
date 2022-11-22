@@ -1,15 +1,15 @@
-import './App.css';
-import { Dashboard } from './components/Body/dashboard';
-import { NavBar } from './components/Navbar/navbar';
+import styles from './App.module.css';
+import { Dashboard } from './components/Body/Dashboard';
+import { Header } from './components/Header/Header';
 
 function App() {
   return (
     <>
-      <div className="grid-container">
-        <div className="navbar">
-          <NavBar />
+      <div className={styles.GridContainer}>
+        <div className={styles.GridContainer_header}>
+          <Header />
         </div>
-        <div className="dashboard">
+        <div className={styles.GridContainer_dashboard}>
           <Dashboard />
         </div>
       </div>

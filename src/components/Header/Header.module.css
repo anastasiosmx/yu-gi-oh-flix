@@ -1,10 +1,4 @@
-.logo-img {
-    grid-area: logo;
-    width: auto;
-    height: 100%;
-}
-
-.navbar-wrapper {
+.HeaderWrapper {
     display: grid;
     height: 100%;
     align-items: center;
@@ -13,7 +7,13 @@
     grid-template-areas: 'logo searchbar .';
 }
 
-.search-bar {
+.HeaderWrapper_logoImg {
+    grid-area: logo;
+    width: auto;
+    height: 100%;
+}
+
+.HeaderWrapper_searchBar {
     grid-area: searchbar;
     background-color: white;
     box-shadow: 2px 3px 10px gray;
