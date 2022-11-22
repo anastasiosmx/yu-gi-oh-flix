@@ -1,0 +1,19 @@
+.logo-img {
+    width: 160px;
+    height: auto;
+}
+
+.navbar-wrapper {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 60% 1fr;
+}
+
+.search-bar {
+    background-color: white;
+    text-align: center;
+    border: 0px;
+    border-radius: 20px;
+    width: 100%;
+    height: 35px;
+}

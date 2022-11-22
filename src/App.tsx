@@ -1,12 +1,18 @@
 import './App.css';
-import React from 'react';
+import { Dashboard } from './components/Body/dashboard';
+import { NavBar } from './components/Navbar/navbar';
 
 function App() {
   return (
     <>
-      <h1>
-        Yu-Gi-Oh!
-      </h1>
+      <div className="grid-container">
+        <div className="navbar">
+          <NavBar />
+        </div>
+        <div className="dashboard">
+          <Dashboard />
+        </div>
+      </div>
     </>
   );
 }
