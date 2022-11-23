@@ -1,0 +1,7 @@
+.CardList_card {
+    background-color: var(--secondary-pale-bg-color);
+    border-radius: 15px;
+    margin: 20px auto 20px auto;
+    width: 300px;
+    height: auto;
+}
