@@ -8,16 +8,17 @@
 .DashboardWrapper_card {
     background-color: white;
     border-radius: 15px;
-    margin: 10% 8% 5% 8%;
+    margin: 10% auto 5% auto;
+    width: 300px;
 }
 
-@media screen and (max-width: 1700px){
+@media screen and (max-width: 1900px){
     .DashboardWrapper {
         grid-template-columns: repeat(5, 1fr);
     }
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1600px){
     .DashboardWrapper {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -35,8 +36,20 @@
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 680px){
     .DashboardWrapper {
         grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 340px){
+    .DashboardWrapper_card {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 260px){
+    .DashboardWrapper_card {
+        width: 150px;
     }
 }
