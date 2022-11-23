@@ -4,6 +4,7 @@ import useGetLastPage from '../../hooks/getLastPage';
 
 export const Dashboard = () => {
     const lastPageCounter = useGetLastPage();
+    
     return(
         <>
             <div className={styles.DashboardWrapper}>
