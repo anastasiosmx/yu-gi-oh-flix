@@ -9,6 +9,9 @@ function App() {
         <div className={styles.GridContainer_header}>
           <Header />
         </div>
+        <div className={styles.GridContainer_pageNavi}>
+          
+        </div>
         <div className={styles.GridContainer_dashboard}>
           <Dashboard />
         </div>
