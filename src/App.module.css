@@ -21,6 +21,6 @@
 }
 
 .GridContainer_dashboard {
-    grid-area: 'dashboard';
+    grid-area: dashboard;
     background-color: var(--main-bg-color);
 }
