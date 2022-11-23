@@ -1,5 +1,6 @@
 import styles from './App.module.css';
 import { Dashboard } from './components/Body/Dashboard';
+import { PageNaviList } from './components/Body/PageNavigation/PageNaviList';
 import { Header } from './components/Header/Header';
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
           <Header />
         </div>
         <div className={styles.GridContainer_pageNavi}>
-          
+          <PageNaviList />
         </div>
         <div className={styles.GridContainer_dashboard}>
           <Dashboard />
