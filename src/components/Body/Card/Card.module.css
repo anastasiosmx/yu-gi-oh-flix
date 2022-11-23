@@ -1,0 +1,18 @@
+.CardWrapper {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'cardImage';
+}
+
+.CardWrapper_cardImage {
+    grid-area: cardImage;
+    height: 100%;
+    box-shadow: 0px 3px 15px black;
+}
+
+.CardWrapper_cardImage_size {
+    height: 100%;
+    width: 100%;
+}
