@@ -6,7 +6,7 @@
 }
 
 .DashboardWrapper_card {
-    background-color: white;
+    background-color: var(--secondary-pale-bg-color);
     border-radius: 15px;
     margin: 10% auto 5% auto;
     width: 300px;
