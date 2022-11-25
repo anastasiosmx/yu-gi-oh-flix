@@ -2,10 +2,10 @@
     display: grid;
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px 40px 1fr;
+    grid-template-rows: 60px 1fr 40px;
     grid-template-areas: 'header'
-                         'pageNavi'
-                         'dashboard';
+                         'dashboard'
+                         'pageNavi';
 }
 
 .GridContainer_header {
