@@ -1,30 +1,40 @@
 import styles from './PageNaviList.module.css';
 import useGetLastPageNumber from '../../../hooks/getPages';
-import { useState } from 'react';
 import { PageNavi } from './PageNavi';
 
-function createNavigationButtons(currentPage: number) {
+function createNavigationButtons(currentPage: number, changePageHandler: any, lastPageCounter: number) {
     let jsxRes: any = [];
 
-    for(let i: number = 1 ; i < (currentPage + 3) ; i++){
-        jsxRes.push(<PageNavi pageNumber={i} key={i}/>);
+    if(currentPage === 1){
+        jsxRes.push(<PageNavi changePageHandler={changePageHandler} lastPageCounter={lastPageCounter} registryFlag={-1} pageNumber={currentPage} key={-1}/>);
+
+        return jsxRes;
     }
+
+    if(currentPage === lastPageCounter){
+        jsxRes.push(<PageNavi changePageHandler={changePageHandler} lastPageCounter={lastPageCounter} registryFlag={-2} pageNumber={currentPage} key={-2}/>);
+
+        return jsxRes;
+    }
+
+    if(currentPage === (lastPageCounter - 1)){
+        jsxRes.push(<PageNavi changePageHandler={changePageHandler} lastPageCounter={lastPageCounter} registryFlag={-3} pageNumber={currentPage} key={-2}/>);
+
+        return jsxRes;
+    }
+    
+    jsxRes.push(<PageNavi changePageHandler={changePageHandler} lastPageCounter={lastPageCounter} registryFlag={0} pageNumber={currentPage} key={currentPage}/>);
     
     return jsxRes;
 }
 
-export const PageNaviList = () => {
-    const [currentPage, setCurrentPage] = useState(1);
+export const PageNaviList = (props: any) => {
     const lastPageCounter: number = useGetLastPageNumber();
-
+    
     return(
         <>
             <div className={styles.PageNaviListWrapper}>
-                {createNavigationButtons(currentPage)}
-                <span className={styles.PageNaviListWrapper_dots}>
-                    . . . . . .
-                </span>
-                <PageNavi pageNumber={lastPageCounter}/>
+                {createNavigationButtons(props.currentPage, props.changePageHandler, lastPageCounter)}
             </div>
         </>
     );
