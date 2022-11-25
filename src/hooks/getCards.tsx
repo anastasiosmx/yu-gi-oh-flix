@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export default function useGetCardPage(page: number){
     const [cards, setCards] = useState([]);
+    let paramsString = '_page='+page+'&_limit=10';
 
     const errorResponse: any = [
         {
@@ -10,7 +11,7 @@ export default function useGetCardPage(page: number){
         }
     ]
 
-    const params = new URLSearchParams({_page: String(page)});
+    const params = new URLSearchParams(paramsString);
 
     useEffect(()=>{
         fetch("http://localhost:3001/data?"+params.toString())
