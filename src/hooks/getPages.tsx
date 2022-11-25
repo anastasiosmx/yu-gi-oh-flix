@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export default function useGetLastPage() {
+export default function useGetLastPageNumber() {
     const [lastPage, setLastPage] = useState(1);
 
     useEffect(() => {

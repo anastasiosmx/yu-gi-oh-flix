@@ -1,0 +1,12 @@
+.PageNaviListWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.PageNaviListWrapper_dots{
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    margin: 0 5px;
+}

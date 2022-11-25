@@ -1,0 +1,10 @@
+.pageNavi_button {
+    margin: 0 4px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    color: var(--main-bg-color);
+    background-color: var(--secondary-pale-bg-color);
+    height: 25px;
+    width: 6%;
+}
