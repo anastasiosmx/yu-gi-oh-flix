@@ -53,6 +53,23 @@ export const PageNavi = (props: any) => {
                     </button>
                 </>
             );
+        }else if(registryFlag === -4){
+            jsxRes.push(
+                <>
+                    <button onClick={() => changePageOnButtonPushHandler(pageNumber - 1)} className={styles.pageNavi_button}>
+                        { pageNumber - 1} &lt;&lt;
+                    </button>
+                    <button className={styles.pageNavi_button__active}>
+                        { pageNumber}
+                    </button>
+                    <button onClick={() => changePageOnButtonPushHandler(pageNumber + 1)} className={styles.pageNavi_button}>
+                        &gt;&gt; { pageNumber + 1}
+                    </button>
+                    <button onClick={() => changePageOnButtonPushHandler(lastPageCounter)} className={styles.pageNavi_button__end}>
+                        END { lastPageCounter }
+                    </button>
+                </>
+            );
         }else{
             jsxRes.push(
                 <>

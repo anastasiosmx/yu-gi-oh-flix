@@ -11,6 +11,12 @@ function createNavigationButtons(currentPage: number, changePageHandler: any, la
         return jsxRes;
     }
 
+    if(currentPage === 2){
+        jsxRes.push(<PageNavi changePageHandler={changePageHandler} lastPageCounter={lastPageCounter} registryFlag={-4} pageNumber={currentPage} key={-1}/>);
+
+        return jsxRes;
+    }
+
     if(currentPage === lastPageCounter){
         jsxRes.push(<PageNavi changePageHandler={changePageHandler} lastPageCounter={lastPageCounter} registryFlag={-2} pageNumber={currentPage} key={-2}/>);
 
