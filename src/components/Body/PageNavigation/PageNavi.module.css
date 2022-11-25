@@ -25,8 +25,8 @@
     border-radius: 10px;
     border: none;
     font-weight: bold;
-    color: black;
-    background-color: green;
+    color: var(--main-bg-color);
+    background-color: var(--secondary-bg-color);
     height: 25px;
     width: fit-content;
 }
@@ -36,8 +36,8 @@
     border-radius: 10px;
     border: none;
     font-weight: bold;
-    color: black;
-    background-color: red;
+    color: var(--main-bg-color);
+    background-color: var(--secondary-bg-color);
     height: 25px;
     width: fit-content;
 }
