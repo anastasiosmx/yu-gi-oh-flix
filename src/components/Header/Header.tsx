@@ -5,7 +5,7 @@ import { useState } from 'react';
 export const Header = () => {
     const [searchParameter, setSearchParameter] = useState('');
 
-    const handleSearch = (event: any) =>{
+    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void =>{
         setSearchParameter(event.target.value);
     }
 
