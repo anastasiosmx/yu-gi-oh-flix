@@ -18,7 +18,7 @@ function App() {
           <Header />
         </div>
         <div className={styles.GridContainer_dashboard}>
-          <Dashboard  />
+          <Dashboard  pageNumber={currentPage} />
         </div>
         <div className={styles.GridContainer_pageNavi}>
           <PageNaviList currentPage={currentPage} changePageHandler={changePageHandler} />

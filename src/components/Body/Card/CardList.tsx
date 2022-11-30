@@ -2,8 +2,8 @@ import { Card } from './Card';
 import styles from './CardList.module.css';
 import useGetCardPage from '../../../hooks/getCards';
 
-export const CardList = () => {
-    const cards = useGetCardPage(1);
+export const CardList = (props: any) => {
+    const cards = useGetCardPage(props.pageNumber);
     return (
         <>
             {cards.map((card: any) => 
