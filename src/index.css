@@ -22,3 +22,7 @@ code {
   --secondary-bg-color: #f0b800;
   --secondary-pale-bg-color: #d2b35e;
 }
+
+button {
+  cursor: pointer;
+}
