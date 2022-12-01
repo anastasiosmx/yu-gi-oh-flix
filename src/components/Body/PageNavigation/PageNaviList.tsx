@@ -1,5 +1,5 @@
 import styles from './PageNaviList.module.css';
-import useGetLastPageNumber from '../../../hooks/getPages';
+import useGetLastPageNumber from '../../../hooks/getLastPageNumber';
 import { PageNavi } from './PageNavi';
 
 function createNavigationButtons(currentPage: number, changePageHandler: any, lastPageCounter: number) {
@@ -35,7 +35,7 @@ function createNavigationButtons(currentPage: number, changePageHandler: any, la
 }
 
 export const PageNaviList = (props: any) => {
-    const lastPageCounter: number = useGetLastPageNumber();
+    const lastPageCounter: number = useGetLastPageNumber(props.searchParameter);
     
     return(
         <>

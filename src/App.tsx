@@ -6,9 +6,14 @@ import { Header } from './components/Header/Header';
 
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchParameter, setSearchParameter] = useState('');
   
   function changePageHandler(pageNumber: number){
     setCurrentPage(pageNumber);
+  }
+
+  function changeSearchParameter(searchParameter: string) {
+    setSearchParameter(searchParameter);
   }
 
   return (
@@ -21,7 +26,7 @@ function App() {
           <Dashboard  pageNumber={currentPage} />
         </div>
         <div className={styles.GridContainer_pageNavi}>
-          <PageNaviList currentPage={currentPage} changePageHandler={changePageHandler} />
+          <PageNaviList currentPage={currentPage} changePageHandler={changePageHandler} searchParameter={searchParameter} />
         </div>
       </div>
     </>

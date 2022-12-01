@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 
-export default function useGetLastPageNumber() {
+export default function useGetLastPageNumber(props: any) {
     const [lastPage, setLastPage] = useState(1);
 
+    const parameter: string = props.searchParameter; 
+
     useEffect(() => {
-        fetch(process.env.REACT_APP_API_URL+"/data?_page=1")
+        fetch(process.env.REACT_APP_API_URL+"/data?_page=1"+parameter)
         .then((response) => {
             if (!response.ok) {
                 throw new Error('Network response was not OK');
