@@ -20,7 +20,7 @@ function App() {
     <>
       <div className={styles.GridContainer}>
         <div className={styles.GridContainer_header}>
-          <Header />
+          <Header changeSearchParameter={changeSearchParameter} />
         </div>
         <div className={styles.GridContainer_dashboard}>
           <Dashboard  pageNumber={currentPage} />

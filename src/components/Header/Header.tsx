@@ -1,12 +1,13 @@
 import logo from '../../images/yu-gi-oh-logo.png';
 import styles from './Header.module.css';
-import { useState } from 'react';
 
-export const Header = () => {
-    const [searchParameter, setSearchParameter] = useState('');
+export const Header = (props: any) => {
 
-    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void =>{
-        setSearchParameter(event.target.value);
+    const handleSearch = (event: any) =>{
+        if(event.key === 'Enter'){
+            let searchParameterAltered = "&q="+event.target.value;
+            props.changeSearchParameter(searchParameterAltered);
+        }
     }
 
     return(
@@ -18,8 +19,7 @@ export const Header = () => {
                     name='search'
                     className={styles.HeaderWrapper_searchBar}
                     placeholder='Search for any card using their name... e.g. "Crystal Tree"'
-                    onChange={event => handleSearch(event)}
-                    value={searchParameter}
+                    onKeyPress={event => handleSearch(event)}
                 />
             </div>
         </>
