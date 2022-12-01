@@ -23,7 +23,7 @@ function App() {
           <Header changeSearchParameter={changeSearchParameter} />
         </div>
         <div className={styles.GridContainer_dashboard}>
-          <Dashboard  pageNumber={currentPage} />
+          <Dashboard  pageNumber={currentPage} searchParameter={searchParameter} />
         </div>
         <div className={styles.GridContainer_pageNavi}>
           <PageNaviList currentPage={currentPage} changePageHandler={changePageHandler} searchParameter={searchParameter} />

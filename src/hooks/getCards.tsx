@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 
-export default function useGetCardPage(page: number){
+export default function useGetCardPage(page: number, searchParameter: string){
     const [cards, setCards] = useState([]);
-    let paramsString = '_page='+page+'&_limit=10';
+
+    let paramsString = '_page='+page+searchParameter;
 
     const errorResponse: any = [
         {
@@ -30,7 +31,7 @@ export default function useGetCardPage(page: number){
 
             setCards(errorResponse);
         });
-    }, [page]);
+    }, [page, searchParameter]);
 
     return cards;
 }
