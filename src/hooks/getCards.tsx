@@ -5,16 +5,16 @@ export default function useGetCardPage(page: number, searchParameter: string){
 
     let paramsString = '_page='+page+searchParameter;
 
-    const errorResponse: any = [
-        {
-            "id": "-1",
-            "name": "Error while trying to fetch Yu-Gi-Oh Cards"
-        }
-    ]
-
-    const params = new URLSearchParams(paramsString);
+    let params = new URLSearchParams(paramsString);
 
     useEffect(()=>{
+        const errorResponse: any = [
+            {
+                "id": "-1",
+                "name": "Error while trying to fetch Yu-Gi-Oh Cards"
+            }
+        ]
+
         fetch("http://localhost:3001/data?"+params.toString())
         .then((response) => {
             if (!response.ok) {
