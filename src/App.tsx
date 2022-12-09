@@ -7,7 +7,7 @@ import { Header } from './components/Header/Header';
 function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchParameter, setSearchParameter] = useState('');
-  const [searchFilterKeyword, setsearchFilterKeyword] = useState('&q=');
+  const [searchFilterKeyword, setSearchFilterKeyword] = useState('&q=');
   
   function changePageHandler(pageNumber: number){
     setCurrentPage(pageNumber);
