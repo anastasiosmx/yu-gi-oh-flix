@@ -10,6 +10,22 @@ export const Header = (props: any) => {
         }
     }
 
+    const handleFilter = (event: any) => {
+        if(event.target.checked){
+            switch (event.target.value) {
+                case "free":
+                    props.changeSearchFilterKeyword("?q=");
+                    break;
+                case "name":
+                    props.changeSearchFilterKeyword("&name=");
+                    break;
+                case "type":
+                    props.changeSearchFilterKeyword("&type=");
+                    break;
+            }
+        }
+    }
+
     return(
         <>
             <div className={styles.HeaderWrapper}>
@@ -22,13 +38,13 @@ export const Header = (props: any) => {
                     onKeyDown={event => handleSearch(event)}
                 />
                 <div className={styles.HeaderWrapper_filters} >
-                    <input type='radio' id='freeSearch' value='free' name='filters' />
+                    <input type='radio' id='freeSearch' value='free' name='filters' onClick={event => handleFilter(event)} />
                     <label htmlFor='freeSearch' className={styles.HeaderWrapper_filters__filterItem}>Free</label>
 
-                    <input type='radio' id='name' value='name' name='filters'/>
+                    <input type='radio' id='name' value='name' name='filters' onClick={event => handleFilter(event)}/>
                     <label htmlFor='name' className={styles.HeaderWrapper_filters__filterItem}>Name</label>
 
-                    <input type='radio' id='type' value='type' name='filters'/>
+                    <input type='radio' id='type' value='type' name='filters' onClick={event => handleFilter(event)}/>
                     <label htmlFor='type' className={styles.HeaderWrapper_filters__filterItem}>Type</label>
                 </div>
             </div>

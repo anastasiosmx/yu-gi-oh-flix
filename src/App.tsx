@@ -17,11 +17,15 @@ function App() {
     setSearchParameter(searchParameter);
   }
 
+  function changeSearchFilterKeyword(searchFilterKeyword: string) {
+    setSearchFilterKeyword(searchFilterKeyword);
+  }
+
   return (
     <>
       <div className={styles.GridContainer}>
         <div className={styles.GridContainer_header}>
-          <Header changeSearchParameter={changeSearchParameter} searchFilterKeyword={searchFilterKeyword} />
+          <Header changeSearchParameter={changeSearchParameter}  changeSearchFilterKeyword={changeSearchFilterKeyword} searchFilterKeyword={searchFilterKeyword} />
         </div>
         <div className={styles.GridContainer_dashboard}>
           <Dashboard  pageNumber={currentPage} searchParameter={searchParameter} />
