@@ -19,7 +19,7 @@ export const Header = (props: any) => {
                     name='search'
                     className={styles.HeaderWrapper_searchBar}
                     placeholder='Search for any set of cards or individual cards using their name, type e.t.c. Example: "Crystal Tree"'
-                    onKeyPress={event => handleSearch(event)}
+                    onKeyDown={event => handleSearch(event)}
                 />
             </div>
         </>
