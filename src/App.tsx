@@ -21,7 +21,7 @@ function App() {
     <>
       <div className={styles.GridContainer}>
         <div className={styles.GridContainer_header}>
-          <Header changeSearchParameter={changeSearchParameter} />
+          <Header changeSearchParameter={changeSearchParameter} searchFilterKeyword={searchFilterKeyword} />
         </div>
         <div className={styles.GridContainer_dashboard}>
           <Dashboard  pageNumber={currentPage} searchParameter={searchParameter} />
