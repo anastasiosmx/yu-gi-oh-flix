@@ -5,7 +5,7 @@ export const Header = (props: any) => {
 
     const handleSearch = (event: any) =>{
         if(event.key === 'Enter'){
-            let searchParameterAltered = "&q="+event.target.value;
+            let searchParameterAltered = props.searchFilterKeyword+event.target.value;
             props.changeSearchParameter(searchParameterAltered);
         }
     }
