@@ -1,6 +1,6 @@
 import styles from './Card.module.css';
 
-export const Card = ({ name, id, description, race, type, atk }: any) => {
+export const Card = ({ name, id, description, race, type }: any) => {
     return(
         <>
             <div className={styles.CardWrapper}>

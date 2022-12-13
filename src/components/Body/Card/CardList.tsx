@@ -10,7 +10,7 @@ export const CardList = (props: any) => {
             {cards.map((card: any) => 
             (   
                 <div key={card.id} className={styles.CardList_card}>
-                    <Card id={card.id} name={card.name} description={card.desc} race={card?.race} type={card.type} atk={card?.atk} />
+                    <Card id={card.id} name={card.name} description={card?.desc} race={card?.race} type={card?.type} />
                 </div>
             )
             )}
