@@ -3,6 +3,10 @@ import styles from './Header.module.css';
 
 export const Header = (props: any) => {
 
+    const logoClick = () => {
+        window.location.reload();
+    }
+
     const handleSearch = (event: any) =>{
         if(event.key === 'Enter'){
             let userInput = event.target.value.split(" ");
@@ -38,7 +42,7 @@ export const Header = (props: any) => {
     return(
         <>
             <div className={styles.HeaderWrapper}>
-                <img className={styles.HeaderWrapper_logoImg} src={logo} alt="logo" />
+                <img className={styles.HeaderWrapper_logoImg} src={logo} alt="logo" onClick={logoClick}/>
                 <input 
                     type='text'
                     name='search'
