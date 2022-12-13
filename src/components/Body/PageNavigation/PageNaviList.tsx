@@ -5,6 +5,8 @@ import { PageNavi } from './PageNavi';
 function createNavigationButtons(currentPage: number, changePageHandler: any, lastPageCounter: number) {
     let jsxRes: any = [];
 
+    console.log(currentPage+" lp = "+lastPageCounter);
+
     if(lastPageCounter === -1){
         return jsxRes;
     }
@@ -15,7 +17,7 @@ function createNavigationButtons(currentPage: number, changePageHandler: any, la
         return jsxRes;
     }
 
-    if(currentPage === 2){
+    if((currentPage === 2) && (currentPage !== lastPageCounter)){
         jsxRes.push(<PageNavi changePageHandler={changePageHandler} lastPageCounter={lastPageCounter} registryFlag={-4} pageNumber={currentPage} key={-1}/>);
 
         return jsxRes;
