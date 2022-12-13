@@ -14,7 +14,7 @@ export const Header = (props: any) => {
         if(event.target.checked){
             switch (event.target.value) {
                 case "free":
-                    props.changeSearchFilterKeyword("?q=");
+                    props.changeSearchFilterKeyword("&q=");
                     break;
                 case "name":
                     props.changeSearchFilterKeyword("&name=");
