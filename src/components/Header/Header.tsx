@@ -5,7 +5,16 @@ export const Header = (props: any) => {
 
     const handleSearch = (event: any) =>{
         if(event.key === 'Enter'){
-            let searchParameterAltered = props.searchFilterKeyword+event.target.value;
+            let userInput = event.target.value.split(" ");
+
+            if(event.target.value !== ""){
+                for (let i = 0; i < userInput.length; i++) {
+                    userInput[i] = userInput[i][0].toUpperCase() + userInput[i].substr(1);
+                }
+                userInput = userInput.join(" ");
+            }
+            
+            let searchParameterAltered = props.searchFilterKeyword + userInput;
             props.changeSearchParameter(searchParameterAltered);
         }
     }

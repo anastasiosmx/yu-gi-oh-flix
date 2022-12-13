@@ -5,8 +5,6 @@ import { PageNavi } from './PageNavi';
 function createNavigationButtons(currentPage: number, changePageHandler: any, lastPageCounter: number) {
     let jsxRes: any = [];
 
-    console.log(currentPage+" lp = "+lastPageCounter);
-
     if(lastPageCounter === -1){
         return jsxRes;
     }
