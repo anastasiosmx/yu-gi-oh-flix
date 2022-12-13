@@ -24,6 +24,18 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    background-color: var(--secondary-pale-bg-color);
+}
+
+.CardWrapper_cardImage__back___name {
+    text-align: center;
+    color: var(--main-bg-color);
+}
+
+.CardWrapper_cardImage__back___descriptionHeader {
+    color: var(--main-bg-color);
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .CardWrapper_cardImage_size {
