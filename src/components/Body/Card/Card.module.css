@@ -1,16 +1,29 @@
 .CardWrapper {
-    display: grid;
     height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 'cardImage';
+    perspective: 1000px;
 }
 
 .CardWrapper_cardImage {
-    grid-area: cardImage;
+    position: relative;
     height: 100%;
     box-shadow: 0px 3px 15px black;
-    transition: transform .2s;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.CardWrapper_cardImage__front {
+    position: absolute;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.CardWrapper_cardImage__back {
+    position: absolute;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
 .CardWrapper_cardImage_size {
@@ -19,6 +32,5 @@
 }
 
 .CardWrapper_cardImage:hover {
-    transform: scale(1.06);
-    cursor: pointer;
+    transform: rotateY(180deg);
 }
