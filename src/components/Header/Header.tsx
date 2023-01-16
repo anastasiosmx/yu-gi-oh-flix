@@ -41,7 +41,7 @@ export const Header = (props: any) => {
 
     return(
         <>
-            <div className={styles.HeaderWrapper}>
+            <div data-testid="header-1" className={styles.HeaderWrapper}>
                 <img className={styles.HeaderWrapper_logoImg} src={logo} alt="logo" onClick={logoClick}/>
                 <input 
                     type='text'
@@ -50,7 +50,7 @@ export const Header = (props: any) => {
                     placeholder='Search for any set of cards or individual cards e.g. "Crystal Tree"'
                     onKeyDown={event => handleSearch(event)}
                 />
-                <div className={styles.HeaderWrapper_filters} >
+                <div data-testid="header-2" className={styles.HeaderWrapper_filters} >
                     <input type='radio' id='freeSearch' value='free' name='filters' onClick={event => handleFilter(event)} />
                     <label htmlFor='freeSearch' className={styles.HeaderWrapper_filters__filterItem}>Free</label>
 
