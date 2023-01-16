@@ -5,11 +5,11 @@ export const Card = ({ name, id, description, race, type }: any) => {
         <>
             <div className={styles.CardWrapper}>
                 <div className={styles.CardWrapper_cardImage}>
-                    <div className={styles.CardWrapper_cardImage__front} >
+                    <div data-testid="card-image" className={styles.CardWrapper_cardImage__front} >
                         <img src={`cards_imgs/${id}.jpg`} alt={name} className={styles.CardWrapper_cardImage_size}/>
                     </div>
-                    <div className={styles.CardWrapper_cardImage__back} >
-                        <h3 className={styles.CardWrapper_cardImage__back___name}>
+                    <div data-testid="card-details" className={styles.CardWrapper_cardImage__back} >
+                        <h3 data-testid="card-name" className={styles.CardWrapper_cardImage__back___name}>
                             {name}
                         </h3>
 
